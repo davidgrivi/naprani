@@ -170,7 +170,7 @@ GUEST_HTML = """<!DOCTYPE html>
       var list=document.getElementById('list');var reqs=(d.requests||[]);
       if(reqs.length===0){list.innerHTML='<div class="empty">Zatím žádná přání – buď první!</div>';return;}
       var html="";
-      reqs.slice().reverse().forEach(function(x){
+      reqs.forEach(function(x){
         html+='<div class="item"><div class="t">'+esc(x.title)+'</div>'+
           (x.artist?'<div class="a">'+esc(x.artist)+'</div>':'')+
           (x.note?'<div class="n">"'+esc(x.note)+'"</div>':'')+'</div>';
